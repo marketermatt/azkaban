@@ -409,6 +409,15 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                         'desc'      => __('To upload or select an existing image click on "Upload" button.', 'azkaban_options'),
                         'default'   => array('url' => get_stylesheet_directory_uri() .'/images/logo.png'),
                     ),
+					array(
+                        'id'        => 'custom_favicon_img',
+                        'type'      => 'media',
+                        'url'       => true,
+                        'title'     => __('Upload Favicon', 'azkaban_options'),
+                        //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
+                        'desc'      => __('To upload or select an existing image click on "Upload" button.', 'azkaban_options'),
+                        'default'   => array('url' => get_stylesheet_directory_uri() .'/images/logo.png'),
+                    ),
                     array(
                         'id'        => 'header_tagline',
                         'type'      => 'text',

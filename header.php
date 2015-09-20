@@ -12,8 +12,12 @@
 <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
-<link rel="icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
+<?php global $azkaban_options; ?>
+<?php
+$favicon_url = ( $azkaban_options['custom_favicon_img']['url'] ) ? $azkaban_options['custom_favicon_img']['url'] : get_stylesheet_directory_uri().'/images/favicon.ico';
+?>
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo $favicon_url; ?>" />
+<link rel="icon" type="image/x-icon" href="<?php echo $favicon_url; ?>" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS FEED" href="<?php bloginfo('rss2_url'); ?>" />
 
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
@@ -22,7 +26,7 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400,700|PT+Sans|Antic+Slab' rel='stylesheet' type='text/css' />
-<?php global $azkaban_options; ?>
+
 <!--[if lt IE 9]>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/html5.js"></script>
 <![endif]-->
