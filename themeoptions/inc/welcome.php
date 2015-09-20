@@ -9,6 +9,8 @@ class Redux_Welcome {
      * @var string The capability users should have to view the page
      */
     public $minimum_capability = 'manage_options';
+	
+	public $easy_digital_download = 'https://easydigitaldownloads.com';
 
     /**
      * Get things started
@@ -36,24 +38,42 @@ class Redux_Welcome {
     public function admin_menus () {
 
         // About Page
-        add_dashboard_page (
-                __ ( 'Welcome to Redux Framework', 'redux-framework' ), __ ( 'Welcome to Redux Framework', 'redux-framework' ), $this->minimum_capability, 'redux-about', array( $this, 'about_screen' )
-        );
+		add_theme_page(
+			__ ( 'Welcome to Redux Framework', 'redux-framework' ),          
+			__ ( 'Welcome to Redux Framework', 'redux-framework' ),           
+			$this->minimum_capability,                   
+			'redux-about',                            
+			array( $this, 'about_screen' )
+		);
 
         // Changelog Page
-        add_dashboard_page (
-                __ ( 'Redux Framework Changelog', 'redux-framework' ), __ ( 'Redux Framework Changelog', 'redux-framework' ), $this->minimum_capability, 'redux-changelog', array( $this, 'changelog_screen' )
-        );
+		add_theme_page(
+			__ ( 'Redux Framework Changelog', 'redux-framework' ),          
+			 __ ( 'Redux Framework Changelog', 'redux-framework' ),           
+			$this->minimum_capability,                   
+			'redux-changelog',                            
+			array( $this, 'changelog_screen' )
+		);
+		
 
         // Getting Started Page
-        add_dashboard_page (
-                __ ( 'Getting started with Redux Framework', 'redux-framework' ), __ ( 'Getting started with Redux Framework', 'redux-framework' ), $this->minimum_capability, 'redux-getting-started', array( $this, 'getting_started_screen' )
-        );
+		add_theme_page(
+			__ ( 'Getting started with Redux Framework', 'redux-framework' ),          
+			 __ ( 'Getting started with Redux Framework', 'redux-framework' ),           
+			$this->minimum_capability,                   
+			'redux-getting-started',                            
+			array( $this, 'getting_started_screen' )
+		);
 
         // Credits Page
-        add_dashboard_page (
-                __ ( 'The people that develop Redux Framework', 'redux-framework' ), __ ( 'The people that develop Redux Framework', 'redux-framework' ), $this->minimum_capability, 'redux-credits', array( $this, 'credits_screen' )
-        );
+		add_theme_page(
+			__ ( 'The people that develop Redux Framework', 'redux-framework' ),          
+			 __ ( 'The people that develop Redux Framework', 'redux-framework' ),           
+			$this->minimum_capability,                   
+			'redux-credits',                            
+			array( $this, 'credits_screen' )
+		);
+		
     }
 
     /**
@@ -356,10 +376,10 @@ class Redux_Welcome {
                 <div class="feature-section">
 
                     <h4><?php _e ( 'Phenomenal Support', 'redux-framework' ); ?></h4>
-                    <p><?php _e ( 'We do our best to provide the best support we can. If you encounter a problem or have a question, post a question in the <a href="https://easydigitaldownloads.com/support">support forums</a>.', 'redux-framework' ); ?></p>
+                    <p><?php _e ( 'We do our best to provide the best support we can. If you encounter a problem or have a question, post a question in the <a href="'.$easy_digital_download.'/support">support forums</a>.', 'redux-framework' ); ?></p>
 
                     <h4><?php _e ( 'Need Even Faster Support?', 'redux' ); ?></h4>
-                    <p><?php _e ( 'Our <a href="https://easydigitaldownloads.com/support/pricing/">Priority Support forums</a> are there for customers that need faster and/or more in-depth assistance.', 'redux-framework' ); ?></p>
+                    <p><?php _e ( 'Our <a href="'.$easy_digital_download.'/support/pricing/">Priority Support forums</a> are there for customers that need faster and/or more in-depth assistance.', 'redux-framework' ); ?></p>
 
                 </div>
             </div>
@@ -387,7 +407,7 @@ class Redux_Welcome {
                     <p><?php _e ( 'Add-on plugins are available that greatly extend the default functionality of Easy Digital Downloads. There are extensions for payment processors, such as Stripe and PayPal, extensions for newsletter integrations, and many, many more.', 'redux-framework' ); ?></p>
 
                     <h4><?php _e ( 'Visit the Extension Store', 'redux-framework' ); ?></h4>
-                    <p><?php _e ( '<a href="https://easydigitaldownloads.com/extensions" target="_blank">The Extensions store</a> has a list of all available extensions, including convenient category filters so you can find exactly what you are looking for.', 'redux-framework' ); ?></p>
+                    <p><?php _e ( '<a href="'.$easy_digital_download.'/extensions" target="_blank">The Extensions store</a> has a list of all available extensions, including convenient category filters so you can find exactly what you are looking for.', 'redux-framework' ); ?></p>
 
                 </div>
             </div>

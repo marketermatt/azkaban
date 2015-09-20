@@ -10,7 +10,7 @@
  * @license   http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
  * @link      https://github.com/thomasgriffin/TGM-Plugin-Activation
  */
-
+ 
 /*
     Copyright 2012  Thomas Griffin  (email : thomas@thomasgriffinmedia.com)
 
@@ -99,7 +99,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @var string
 		 */
-		public $domain = 'tgmpa';
+		public $domain = 'azkaban'; 
 
 		/**
 		 * Default absolute path to folder containing pre-packaged plugin zip files.
@@ -161,23 +161,23 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			self::$instance =& $this;
 
 			$this->strings = array(
-				'page_title'                      => __( 'Install Required Plugins', $this->domain ),
-				'menu_title'                      => __( 'Install Plugins', $this->domain ),
-				'installing'                      => __( 'Installing Plugin: %s', $this->domain ),
-				'oops'                            => __( 'Something went wrong.', $this->domain ),
-				'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.' ),
-				'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.' ),
-				'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.' ),
-				'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.' ),
-				'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.' ),
-				'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.' ),
-				'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.' ),
-				'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.' ),
-				'install_link' 					  => _n_noop( 'Begin installing plugin', 'Begin installing plugins' ),
-				'activate_link' 				  => _n_noop( 'Activate installed plugin', 'Activate installed plugins' ),
-				'return'                          => __( 'Return to Required Plugins Installer', $this->domain ),
-				'plugin_activated'                => __( 'Plugin activated successfully.', $this->domain ),
-				'complete'                        => __( 'All plugins installed and activated successfully. %1$s', $this->domain ),
+				'page_title'                      => __( 'Install Required Plugins', 'azkaban' ),
+				'menu_title'                      => __( 'Install Plugins', 'azkaban' ),
+				'installing'                      => __( 'Installing Plugin: %s', 'azkaban'  ),
+				'oops'                            => __( 'Something went wrong.', 'azkaban' ),
+				'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.' ,'azkaban'),
+				'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.','azkaban'  ),
+				'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.' ,'azkaban'),
+				'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.' ,'azkaban'),
+				'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.','azkaban' ),
+				'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.','azkaban' ),
+				'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.','azkaban' ),
+				'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.','azkaban' ),
+				'install_link' 					  => _n_noop( 'Begin installing plugin', 'Begin installing plugins','azkaban' ),
+				'activate_link' 				  => _n_noop( 'Activate installed plugin', 'Activate installed plugins' ,'azkaban'),
+				'return'                          => __( 'Return to Required Plugins Installer', 'azkaban' ),
+				'plugin_activated'                => __( 'Plugin activated successfully.', 'azkaban' ),
+				'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'azkaban' ),
 			);
 
 			/** Annouce that the class is ready, and pass the object (for advanced use) */
@@ -185,6 +185,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			/** When the rest of WP has loaded, kick-start the rest of the class */
 			add_action( 'init', array( &$this, 'init' ) );
+			
 
 		}
 
@@ -332,8 +333,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			foreach ( $this->plugins as $plugin ) {
 				if ( ! is_plugin_active( $plugin['file_path'] ) ) {
-					add_submenu_page(
-						$this->parent_menu_slug,				// Parent menu slug
+					add_theme_page(
 						$this->strings['page_title'],           // Page title
 						$this->strings['menu_title'],           // Menu title
 						'edit_theme_options',                   // Capability
@@ -367,12 +367,10 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			?>
 			<div class="tgmpa wrap">
-
-				<?php screen_icon( apply_filters( 'tgmpa_default_screen_icon', 'themes' ) ); ?>
 				<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 				<?php $plugin_table->prepare_items(); ?>
 
-				<?php if ( isset( $this->message ) ) _e( wp_kses_post( $this->message ), $this->domain ); ?>
+				<?php if ( isset( $this->message ) ) _e( wp_kses_post( $this->message ), 'azkaban' ); ?>
 
 				<form id="tgmpa-plugins" action="" method="post">
             		<input type="hidden" name="tgmpa-page" value="<?php echo $this->menu; ?>" />
@@ -487,7 +485,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 					if ( is_wp_error( $activate ) ) {
 						echo '<div id="message" class="error"><p>' . $activate->get_error_message() . '</p></div>';
-						echo '<p><a href="' . add_query_arg( 'page', $this->menu, admin_url( $this->parent_url_slug ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . __( 'Return to Required Plugins Installer', $this->domain ) . '</a></p>';
+						echo '<p><a href="' . add_query_arg( 'page', $this->menu, admin_url( $this->parent_url_slug ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . __( 'Return to Required Plugins Installer', 'azkaban' ) . '</a></p>';
 						return true; // End it here if there is an error with automatic activation
 					}
 					else {
@@ -499,7 +497,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				$complete = array();
 				foreach ( $this->plugins as $plugin ) {
 					if ( ! is_plugin_active( $plugin['file_path'] ) ) {
-						echo '<p><a href="' . add_query_arg( 'page', $this->menu, admin_url( $this->parent_url_slug ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . __( $this->strings['return'], $this->domain ) . '</a></p>';
+						echo '<p><a href="' . add_query_arg( 'page', $this->menu, admin_url( $this->parent_url_slug ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . __( $this->strings['return'], 'azkaban' ) . '</a></p>';
 						$complete[] = $plugin;
 						break;
 					}
@@ -514,7 +512,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 				/** All plugins are active, so we display the complete string and hide the plugin menu */
 				if ( empty( $complete ) ) {
-					echo '<p>' .  sprintf( $this->strings['complete'], '<a href="' . admin_url() . '" title="' . __( 'Return to the Dashboard', $this->domain ) . '">' . __( 'Return to the Dashboard', $this->domain ) . '</a>' ) . '</p>';
+					echo '<p>' .  sprintf( $this->strings['complete'], '<a href="' . admin_url() . '" title="' . __( 'Return to the Dashboard', 'azkaban' ) . '">' . __( 'Return to the Dashboard', 'azkaban' ) . '</a>' ) . '</p>';
 					echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 				}
 
@@ -536,13 +534,13 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 				if ( is_wp_error( $activate ) ) {
 					echo '<div id="message" class="error"><p>' . $activate->get_error_message() . '</p></div>';
-					echo '<p><a href="' . add_query_arg( 'page', $this->menu, admin_url( $this->parent_url_slug ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . __( $this->strings['return'], $this->domain ) . '</a></p>';
+					echo '<p><a href="' . add_query_arg( 'page', $this->menu, admin_url( $this->parent_url_slug ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . __( $this->strings['return'], 'azkaban' ) . '</a></p>';
 					return true; // End it here if there is an error with activation
 				}
 				else {
 					/** Make sure message doesn't display again if bulk activation is performed immediately after a single activation */
 					if ( ! isset( $_POST[sanitize_key( 'action' )] ) ) {
-						$msg = sprintf( __( 'The following plugin was activated successfully: %s.', $this->domain ), '<strong>' . $plugin['name'] . '</strong>' );
+						$msg = sprintf( __( 'The following plugin was activated successfully: %s.', 'azkaban' ), '<strong>' . $plugin['name'] . '</strong>' );
 						echo '<div id="message" class="updated"><p>' . $msg . '</p></div>';
 					}
 				}
@@ -688,12 +686,12 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 						$last_plugin = array_pop( $plugin_groups ); // Pop off last name to prep for readability
 						$imploded    = empty( $plugin_groups ) ? '<em>' . $last_plugin . '</em>' : '<em>' . ( implode( ', ', $plugin_groups ) . '</em> and <em>' . $last_plugin . '</em>' );
 
-						$rendered .= '<p>' . sprintf( translate_nooped_plural( $this->strings[$type], $count, $this->domain ), $imploded, $count ) . '</p>'; // All messages now stored
+						$rendered .= '<p>' . sprintf( translate_nooped_plural( $this->strings[$type], $count, 'azkaban' ), $imploded, $count ) . '</p>'; // All messages now stored
 					}
 
 					/** Setup variables to determine if action links are needed */
-					$show_install_link  = $install_link ? '<a href="' . add_query_arg( 'page', $this->menu, admin_url( $this->parent_url_slug ) ) . '">' . translate_nooped_plural( $this->strings['install_link'], $install_link_count, $this->domain ) . '</a>' : '';
-					$show_activate_link = $activate_link ? '<a href="' . admin_url( 'plugins.php' ) . '">' . translate_nooped_plural( $this->strings['activate_link'], $activate_link_count, $this->domain ) . '</a>'  : '';
+					$show_install_link  = $install_link ? '<a href="' . add_query_arg( 'page', $this->menu, admin_url( $this->parent_url_slug ) ) . '">' . translate_nooped_plural( $this->strings['install_link'], $install_link_count, 'azkaban' ) . '</a>' : '';
+					$show_activate_link = $activate_link ? '<a href="' . admin_url( 'plugins.php' ) . '">' . translate_nooped_plural( $this->strings['activate_link'], $activate_link_count, 'azkaban' ) . '</a>'  : '';
 
 					/** Define all of the action links */
 					$action_links = apply_filters(
@@ -701,7 +699,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 						array(
 							'install'  => ( current_user_can( 'install_plugins' ) ) ? $show_install_link : '',
 							'activate' => ( current_user_can( 'activate_plugins' ) ) ? $show_activate_link : '',
-							'dismiss'  => '<a class="dismiss-notice" href="' . add_query_arg( 'tgmpa-dismiss', 'dismiss_admin_notices' ) . '" target="_parent">' . __( 'Dismiss this notice', $this->domain ) . '</a>',
+							'dismiss'  => '<a class="dismiss-notice" href="' . add_query_arg( 'tgmpa-dismiss', 'dismiss_admin_notices' ) . '" target="_parent">' . __( 'Dismiss this notice', 'azkaban' ) . '</a>',
 						)
 					);
 
@@ -1088,30 +1086,30 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				if ( isset( $plugin['external_url'] ) ) {
 					/** The plugin is linked to an external source */
-					$table_data[$i]['source'] = __( 'External Link', TGM_Plugin_Activation::$instance->domain );
+					$table_data[$i]['source'] = __( 'External Link', 'azkaban' );
 				}
 				elseif ( isset( $plugin['source'] ) ) {
 					/** The plugin must be from a private repository */
 					if ( preg_match( '|^http(s)?://|', $plugin['source'] ) )
-						$table_data[$i]['source'] = __( 'Private Repository', TGM_Plugin_Activation::$instance->domain );
+						$table_data[$i]['source'] = __( 'Private Repository', 'azkaban' );
 					/** The plugin is pre-packaged with the theme */
 					else
-						$table_data[$i]['source'] = __( 'Pre-Packaged', TGM_Plugin_Activation::$instance->domain );
+						$table_data[$i]['source'] = __( 'Pre-Packaged', 'azkaban' );
 				}
 				/** The plugin is from the WordPress repository */
 				else {
-					$table_data[$i]['source'] = __( 'WordPress Repository', TGM_Plugin_Activation::$instance->domain );
+					$table_data[$i]['source'] = __( 'WordPress Repository', 'azkaban' );
 				}
 
-				$table_data[$i]['type'] = $plugin['required'] ? __( 'Required', TGM_Plugin_Activation::$instance->domain ) : __( 'Recommended', TGM_Plugin_Activation::$instance->domain );
+				$table_data[$i]['type'] = $plugin['required'] ? __( 'Required', 'azkaban' ) : __( 'Recommended', 'azkaban' );
 
 				if ( ! isset( $installed_plugins[$plugin['file_path']] ) )
-					$table_data[$i]['status'] = sprintf( '%1$s', __( 'Not Installed', TGM_Plugin_Activation::$instance->domain ) );
+					$table_data[$i]['status'] = sprintf( '%1$s', __( 'Not Installed', 'azkaban' ) );
 				elseif ( is_plugin_inactive( $plugin['file_path'] ) )
-					$table_data[$i]['status'] = sprintf( '%1$s', __( 'Installed But Not Activated', TGM_Plugin_Activation::$instance->domain ) );
+					$table_data[$i]['status'] = sprintf( '%1$s', __( 'Installed But Not Activated', 'azkaban' ) );
 
 				$table_data[$i]['file_path'] = $plugin['file_path'];
-				$table_data[$i]['url'] = isset( $plugin['source'] ) ? $plugin['source'] : 'repo';
+				$table_data[$i]['url'] = isset( $plugin['source'] ) ? $plugin['source'] : 'repo'; 
 
 				$i++;
 			}
@@ -1278,7 +1276,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		public function no_items() {
 
-			printf( __( 'No plugins to install or activate. <a href="%1$s" title="Return to the Dashboard">Return to the Dashboard</a>', TGM_Plugin_Activation::$instance->domain ), admin_url() );
+			printf( __( 'No plugins to install or activate. <a href="%1$s" title="Return to the Dashboard">Return to the Dashboard</a>', 'azkaban' ), admin_url() );
 			echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 
 		}
@@ -1294,10 +1292,10 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			$columns = array(
 				'cb'     => '<input type="checkbox" />',
-				'plugin' => __( 'Plugin', TGM_Plugin_Activation::$instance->domain ),
-				'source' => __( 'Source', TGM_Plugin_Activation::$instance->domain ),
-				'type'   => __( 'Type', TGM_Plugin_Activation::$instance->domain ),
-				'status' => __( 'Status', TGM_Plugin_Activation::$instance->domain )
+				'plugin' => __( 'Plugin', 'azkaban' ),
+				'source' => __( 'Source', 'azkaban' ),
+				'type'   => __( 'Type', 'azkaban' ),
+				'status' => __( 'Status', 'azkaban' )
 			);
 
 			return $columns;
@@ -1315,8 +1313,8 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		public function get_bulk_actions() {
 
 			$actions = array(
-				'tgmpa-bulk-install'  => __( 'Install', TGM_Plugin_Activation::$instance->domain ),
-				'tgmpa-bulk-activate' => __( 'Activate', TGM_Plugin_Activation::$instance->domain ),
+				'tgmpa-bulk-install'  => __( 'Install', 'azkaban' ),
+				'tgmpa-bulk-activate' => __( 'Activate', 'azkaban' ),
 			);
 
 			return $actions;
@@ -1493,7 +1491,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				/** Wrap the install process with the appropriate HTML */
 				echo '<div class="tgmpa wrap">';
-					screen_icon( apply_filters( 'tgmpa_default_screen_icon', 'themes' ) );
+	
 					echo '<h2>' . esc_html( get_admin_page_title() ) . '</h2>';
 					/** Process the bulk installation submissions */
 					$installer->bulk_install( $sources );
@@ -1541,7 +1539,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				if ( is_wp_error( $activate ) )
 					echo '<div id="message" class="error"><p>' . $activate->get_error_message() . '</p></div>';
 				else
-					printf( '<div id="message" class="updated"><p>%1$s %2$s</p></div>', _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, TGM_Plugin_Activation::$instance->domain ), $imploded );
+					printf( '<div id="message" class="updated"><p>%1$s %2$s</p></div>', _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'azkaban' ), $imploded );
 
  				/** Update recently activated plugins option */
 				$recent = (array) get_option( 'recently_activated' );
@@ -1826,12 +1824,12 @@ if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET[sanitize_key( 'page' )] )
 	 		 */
 			public function install_strings() {
 
-				$this->strings['no_package']          = __( 'Install package not available.', TGM_Plugin_Activation::$instance->domain );
-				$this->strings['downloading_package'] = __( 'Downloading install package from <span class="code">%s</span>&#8230;', TGM_Plugin_Activation::$instance->domain );
-				$this->strings['unpack_package']      = __( 'Unpacking the package&#8230;', TGM_Plugin_Activation::$instance->domain );
-				$this->strings['installing_package']  = __( 'Installing the plugin&#8230;', TGM_Plugin_Activation::$instance->domain );
-				$this->strings['process_failed']      = __( 'Plugin install failed.', TGM_Plugin_Activation::$instance->domain );
-				$this->strings['process_success']     = __( 'Plugin installed successfully.', TGM_Plugin_Activation::$instance->domain );
+				$this->strings['no_package']          = __( 'Install package not available.', 'azkaban' );
+				$this->strings['downloading_package'] = __( 'Downloading install package from <span class="code">%s</span>&#8230;', 'azkaban' );
+				$this->strings['unpack_package']      = __( 'Unpacking the package&#8230;', 'azkaban' );
+				$this->strings['installing_package']  = __( 'Installing the plugin&#8230;', 'azkaban' );
+				$this->strings['process_failed']      = __( 'Plugin install failed.', 'azkaban' );
+				$this->strings['process_success']     = __( 'Plugin installed successfully.', 'azkaban' );
 
 			}
 
@@ -1842,8 +1840,8 @@ if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET[sanitize_key( 'page' )] )
 	 		 */
 			public function activate_strings() {
 
-				$this->strings['activation_failed']  = __( 'Plugin activation failed.', TGM_Plugin_Activation::$instance->domain );
-				$this->strings['activation_success'] = __( 'Plugin activated successfully.', TGM_Plugin_Activation::$instance->domain );
+				$this->strings['activation_failed']  = __( 'Plugin activation failed.', 'azkaban' );
+				$this->strings['activation_success'] = __( 'Plugin activated successfully.', 'azkaban' );
 
 			}
 
@@ -1952,19 +1950,19 @@ if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET[sanitize_key( 'page' )] )
 
 				/** Automatic activation strings */
 				if ( TGM_Plugin_Activation::$instance->is_automatic ) {
-					$this->upgrader->strings['skin_upgrade_start']        = __( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', TGM_Plugin_Activation::$instance->domain );
-					$this->upgrader->strings['skin_update_successful']    = __( '%1$s installed and activated successfully.', TGM_Plugin_Activation::$instance->domain ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Show Details', TGM_Plugin_Activation::$instance->domain ) . '</span><span class="hidden">' . __( 'Hide Details', TGM_Plugin_Activation::$instance->domain ) . '</span>.</a>';
-					$this->upgrader->strings['skin_upgrade_end']          = __( 'All installations and activations have been completed.', TGM_Plugin_Activation::$instance->domain );
-					$this->upgrader->strings['skin_before_update_header'] = __( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', TGM_Plugin_Activation::$instance->domain );
+					$this->upgrader->strings['skin_upgrade_start']        = __( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'azkaban' );
+					$this->upgrader->strings['skin_update_successful']    = __( '%1$s installed and activated successfully.', 'azkaban' ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Show Details', 'azkaban' ) . '</span><span class="hidden">' . __( 'Hide Details', 'azkaban' ) . '</span>.</a>';
+					$this->upgrader->strings['skin_upgrade_end']          = __( 'All installations and activations have been completed.', 'azkaban' );
+					$this->upgrader->strings['skin_before_update_header'] = __( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'azkaban' );
 				}
 				/** Default installation strings */
 				else {
-					$this->upgrader->strings['skin_upgrade_start']        = __( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', TGM_Plugin_Activation::$instance->domain );
-					$this->upgrader->strings['skin_update_failed_error']  = __( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', TGM_Plugin_Activation::$instance->domain );
-					$this->upgrader->strings['skin_update_failed']        = __( 'The installation of %1$s failed.', TGM_Plugin_Activation::$instance->domain );
-					$this->upgrader->strings['skin_update_successful']    = __( '%1$s installed successfully.', TGM_Plugin_Activation::$instance->domain ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Show Details', TGM_Plugin_Activation::$instance->domain ) . '</span><span class="hidden">' . __( 'Hide Details', TGM_Plugin_Activation::$instance->domain ) . '</span>.</a>';
-					$this->upgrader->strings['skin_upgrade_end']          = __( 'All installations have been completed.', TGM_Plugin_Activation::$instance->domain );
-					$this->upgrader->strings['skin_before_update_header'] = __( 'Installing Plugin %1$s (%2$d/%3$d)', TGM_Plugin_Activation::$instance->domain );
+					$this->upgrader->strings['skin_upgrade_start']        = __( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'azkaban' );
+					$this->upgrader->strings['skin_update_failed_error']  = __( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'azkaban' );
+					$this->upgrader->strings['skin_update_failed']        = __( 'The installation of %1$s failed.', 'azkaban' );
+					$this->upgrader->strings['skin_update_successful']    = __( '%1$s installed successfully.', 'azkaban' ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Show Details', 'azkaban' ) . '</span><span class="hidden">' . __( 'Hide Details', 'azkaban' ) . '</span>.</a>';
+					$this->upgrader->strings['skin_upgrade_end']          = __( 'All installations have been completed.', 'azkaban' );
+					$this->upgrader->strings['skin_before_update_header'] = __( 'Installing Plugin %1$s (%2$d/%3$d)', 'azkaban' );
 				}
 
 			}
@@ -2040,7 +2038,7 @@ if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET[sanitize_key( 'page' )] )
 				$complete = array();
 				foreach ( TGM_Plugin_Activation::$instance->plugins as $plugin ) {
 					if ( ! is_plugin_active( $plugin['file_path'] ) ) {
-						echo '<p><a href="' . add_query_arg( 'page', TGM_Plugin_Activation::$instance->menu, admin_url( TGM_Plugin_Activation::$instance->parent_url_slug ) ) . '" title="' . esc_attr( TGM_Plugin_Activation::$instance->strings['return'] ) . '" target="_parent">' . __( TGM_Plugin_Activation::$instance->strings['return'], TGM_Plugin_Activation::$instance->domain ) . '</a></p>';
+						echo '<p><a href="' . add_query_arg( 'page', TGM_Plugin_Activation::$instance->menu, admin_url( TGM_Plugin_Activation::$instance->parent_url_slug ) ) . '" title="' . esc_attr( TGM_Plugin_Activation::$instance->strings['return'] ) . '" target="_parent">' . __( TGM_Plugin_Activation::$instance->strings['return'], 'azkaban' ) . '</a></p>';
 						$complete[] = $plugin;
 						break;
 					}
@@ -2055,7 +2053,7 @@ if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET[sanitize_key( 'page' )] )
 
 				/** All plugins are active, so we display the complete string and hide the menu to protect users */
 				if ( empty( $complete ) ) {
-					echo '<p>' .  sprintf( TGM_Plugin_Activation::$instance->strings['complete'], '<a href="' . admin_url() . '" title="' . __( 'Return to the Dashboard', TGM_Plugin_Activation::$instance->domain ) . '">' . __( 'Return to the Dashboard', TGM_Plugin_Activation::$instance->domain ) . '</a>' ) . '</p>';
+					echo '<p>' .  sprintf( TGM_Plugin_Activation::$instance->strings['complete'], '<a href="' . admin_url() . '" title="' . __( 'Return to the Dashboard', 'azkaban' ) . '">' . __( 'Return to the Dashboard', 'azkaban' ) . '</a>' ) . '</p>';
 					echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 				}
 

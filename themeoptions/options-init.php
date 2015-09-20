@@ -197,10 +197,10 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
             <?php if ($screenshot) : ?>
                 <?php if (current_user_can('edit_theme_options')) : ?>
                         <a href="<?php echo wp_customize_url(); ?>" class="load-customize hide-if-no-customize" title="<?php echo esc_attr($customize_title); ?>">
-                            <img src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview'); ?>" />
+                            <img src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview','azkaban'); ?>" />
                         </a>
                 <?php endif; ?>
-                    <img class="hide-if-customize" src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview'); ?>" />
+                    <img class="hide-if-customize" src="<?php echo esc_url($screenshot); ?>" alt="<?php esc_attr_e('Current theme preview','azkaban'); ?>" />
                 <?php endif; ?>
 
                 <h4><?php echo $this->theme->display('Name'); ?></h4>
@@ -214,7 +214,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                     <p class="theme-description"><?php echo $this->theme->display('Description'); ?></p>
             <?php
             if ($this->theme->parent()) {
-                printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'azkaban_options'), $this->theme->parent()->display('Name'));
+                printf(' <p class="howto">' . __('This <a href="%1$s">child theme</a> requires its parent theme, %2$s.','azkaban') . '</p>', __('http://codex.wordpress.org/Child_Themes', 'azkaban_options'), $this->theme->parent()->display('Name'));
             }
             ?>
 
@@ -1631,7 +1631,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
             );
 
             // Set the help sidebar
-            $this->args['help_sidebar'] = __('<p><a href="https://www.facebook.com/CraftyThemes" target="_blank"><img src="'.get_bloginfo('template_url').'/images/socialicons/fb.png" title="Find Us On Facebook" /></a> <a href="https://twitter.com/CraftyThemes" target="_blank"><img src="'.get_bloginfo('template_url').'/images/socialicons/twitter.png" title="Follow Us On Twitter" /></a> <a href="https://www.youtube.com/channel/UCHBQpt1gn7woiKQkgVDAObw" target="_blank"><img src="'.get_bloginfo('template_url').'/images/socialicons/youtube.png" title="Check Us On YouTube" /></a> <a href="http://www.pinterest.com/berkansanches/craftythemes/" target="_blank"><img src="'.get_bloginfo('template_url').'/images/socialicons/pinterest.png" title="Check Us On Pinterest" /></a></p>', 'azkaban_options');
+            $this->args['help_sidebar'] = __('<p><a href="https://www.facebook.com/CraftyThemes" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/fb.png" title="Find Us On Facebook" /></a> <a href="https://twitter.com/CraftyThemes" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/twitter.png" title="Follow Us On Twitter" /></a> <a href="https://www.youtube.com/channel/UCHBQpt1gn7woiKQkgVDAObw" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/youtube.png" title="Check Us On YouTube" /></a> <a href="http://www.pinterest.com/berkansanches/craftythemes/" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/pinterest.png" title="Check Us On Pinterest" /></a></p>', 'azkaban_options');
         }
 
         /**

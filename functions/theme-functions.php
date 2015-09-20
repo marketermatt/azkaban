@@ -289,7 +289,7 @@ function get_category_id($cat_name){
 /****************************************************************************/
 function read_more_func( $atts ) {    
 	extract(shortcode_atts(array(
-	    'text' => esc_html__('Read more', 'ignite'),
+	    'text' => esc_html__('Read more', 'azkaban'),
 	    'title' => '',
 	    'url' => '#',
 	    'align' => 'left',

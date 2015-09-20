@@ -1169,12 +1169,15 @@
                     }
                     // Add the submenu if it's permitted.
                     if ( true == $addMenu ) {
-                        $this->page = add_submenu_page(
-                            $page_parent, $page_title, $menu_title, $page_permissions, $page_slug, array(
-                                &$this,
-                                '_options_page_html'
-                            )
-                        );
+                       
+						$this->page = add_theme_page(
+							$page_title,           // Page title
+							$menu_title,           // Menu title
+							$page_permissions,                   // Capability
+							$page_slug,                            // Menu slug
+							array(&$this,'_options_page_html') // Callback
+						);
+						
                     }
                 }
             }
@@ -1199,7 +1202,7 @@
                     );
 
                 } else {
-                    $this->page = add_menu_page(
+                    $this->page = add_theme_page(
                         $this->args['page_title'],
                         $this->args['menu_title'],
                         $this->args['page_permissions'],
@@ -1226,8 +1229,7 @@
                                     continue;
                                 }
 
-                                add_submenu_page(
-                                    $this->args['page_slug'],
+                                add_theme_page(
                                     $section['title'],
                                     $section['title'],
                                     $this->args['page_permissions'],
@@ -1250,8 +1252,7 @@
                         }
 
                         if ( true == $this->args['system_info'] ) {
-                            add_submenu_page(
-                                $this->args['page_slug'],
+                            add_theme_page(
                                 __( 'System Info', 'redux-framework' ),
                                 __( 'System Info', 'redux-framework' ),
                                 $this->args['page_permissions'],

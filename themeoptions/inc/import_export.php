@@ -144,14 +144,15 @@
             }
 
             public function add_submenu() {
-                add_submenu_page(
-                    $this->parent->args['page_slug'],
+                add_theme_page(
                     __( 'Import / Export', 'redux-framework' ),
                     __( 'Import / Export', 'redux-framework' ),
                     $this->parent->args['page_permissions'],
                     $this->parent->args['page_slug'] . '&tab=import_export_default',
                     '__return_null'
                 );
+				
+				
             }
 
             public function enqueue() {

@@ -44,7 +44,7 @@ if ( ! comments_open() )
 			<p class="woocommerce-noreviews"><?php _e( 'There are no reviews yet.', 'woocommerce' ); ?></p>
 
 		<?php endif; ?>
-	</div>
+	</div> 
 
 	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->id ) ) : ?>
 
