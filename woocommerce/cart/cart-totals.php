@@ -4,7 +4,7 @@
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.1.0
+ * @version     2.3.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -36,6 +36,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			<?php wc_cart_totals_shipping_html(); ?>
 
 			<?php do_action( 'woocommerce_cart_totals_after_shipping' ); ?>
+		
+		<?php elseif ( WC()->cart->needs_shipping() ) : ?>
+
+			<tr class="shipping">
+				<th><?php _e( 'Shipping', 'woocommerce' ); ?></th>
+				<td><?php woocommerce_shipping_calculator(); ?></td>
+			</tr>	
 
 		<?php endif; ?>
 
