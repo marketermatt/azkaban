@@ -1618,3 +1618,7 @@ img.wp-post-image {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+
+.related h2{
+  margin-left: 10px !important;
+}
