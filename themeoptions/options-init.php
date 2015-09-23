@@ -910,7 +910,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                         'title'     => __('Footer Text', 'azkaban_options'),
                         'subtitle'  => __('Enter text to be shown on footer', 'azkaban_options'),
                         'validate'  => 'html',
-                        'default'   => 'Copyright 2014 <a href="http://craftythemes.com/">CraftyThemes.com</a> - All rights reserved'
+                        'default'   => 'Copyright 2014 <a href="http://PixelThemeStudio.ca/">PixelThemeStudio.ca</a> - All rights reserved'
                     ),
                     array(
                         'id'        => 'show_wp_link_in_footer',
@@ -1612,7 +1612,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
             $this->sections[] = array(
                 'icon'      => 'el-icon-info-sign',
                 'title'     => __('Theme Information', 'azkaban_options'),
-                'desc'      => __('<p class="description">Visit us at <a href="http://craftythemes.com/">CraftyThemes.com</a></p>', 'azkaban_options'),
+                'desc'      => __('<p class="description">Visit us at <a href="http://PixelThemeStudio.ca/">PixelThemeStudio.ca</a></p>', 'azkaban_options'),
                 'fields'    => array(
                     array(
                         'id'        => 'opt-raw-info',
@@ -1630,17 +1630,17 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
             $this->args['help_tabs'][] = array(
                 'id'        => 'azkaban-help-tab-1',
                 'title'     => __('More Information', 'azkaban_options'),
-                'content'   => __('<p>Feel free to <a href="http://craftythemes.com/support/">contact us</a> for any help you need.</p>', 'azkaban_options')
+                'content'   => __('<p>Feel free to <a href="http://PixelThemeStudio.ca/contact/">contact us</a> for any help you need.</p>', 'azkaban_options')
             );
 
             $this->args['help_tabs'][] = array(
                 'id'        => 'azkaban-help-tab-2',
                 'title'     => __('Submit Review', 'azkaban_options'),
-                'content'   => __('<p>Submit your review at <a href="http://craftythemes.com/">CraftyThemes.com</a>.</p>', 'azkaban_options')
+                'content'   => __('<p>Submit your review at <a href="http://PixelThemeStudio.ca/">PixelThemeStudio.ca</a>.</p>', 'azkaban_options')
             );
 
             // Set the help sidebar
-            $this->args['help_sidebar'] = __('<p><a href="https://www.facebook.com/CraftyThemes" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/fb.png" title="Find Us On Facebook" /></a> <a href="https://twitter.com/CraftyThemes" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/twitter.png" title="Follow Us On Twitter" /></a> <a href="https://www.youtube.com/channel/UCHBQpt1gn7woiKQkgVDAObw" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/youtube.png" title="Check Us On YouTube" /></a> <a href="http://www.pinterest.com/berkansanches/craftythemes/" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/pinterest.png" title="Check Us On Pinterest" /></a></p>', 'azkaban_options');
+            $this->args['help_sidebar'] = __('<p><a href="https://www.facebook.com/pthemestudio" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/fb.png" title="Find Us On Facebook" /></a> <a href="https://twitter.com/pthemestudio" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/twitter.png" title="Follow Us On Twitter" /></a> <a href="https://www.youtube.com/channel/UCHBQpt1gn7woiKQkgVDAObw" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/youtube.png" title="Check Us On YouTube" /></a> <a href="http://www.pinterest.com/berkansanches/pthemestudio/" target="_blank"><img src="'.get_template_directory_uri().'/images/socialicons/pinterest.png" title="Check Us On Pinterest" /></a></p>', 'azkaban_options');
         }
 
         /**
@@ -1699,7 +1699,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                 'save_defaults' => '1',
                 'show_import_export' => '1',
                 'update_notice' => '1',
-                'footer_credit' => 'Powered By <a href="http://www.reduxframework.com/">Redux Framework</a> v3.2.7.1 - Developed By <a href="http://craftythemes.com">CraftyThemes.com</a>',
+                'footer_credit' => 'Powered By <a href="http://www.reduxframework.com/">Redux Framework</a> v3.2.7.1 - Developed By <a href="http://PixelThemeStudio.ca">PixelThemeStudio.ca</a>',
             );
 
             // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
@@ -1720,7 +1720,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                 //'img'   => '', // You can use icon OR img. IMG needs to be a full URL.
             );
             $this->args['share_icons'][] = array(
-                'url'   => 'http://www.pinterest.com/berkansanches/craftythemes/',
+                'url'   => 'http://www.pinterest.com/berkansanches/pthemestudio/',
                 'title' => 'Find us on Pinterest',
                 'icon'  => 'el-icon-pinterest'
             );
