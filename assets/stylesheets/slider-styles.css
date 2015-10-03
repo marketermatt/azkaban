@@ -104,7 +104,7 @@ ul.flex-direction-nav {
 .flex-control-paging li a {display: block; cursor: pointer; text-indent: -9999px; width:100%; background:#666; height:13px;  -webkit-transition: all .5s ease; -moz-transition: all .5s ease; transition: all .5s ease;}
 .flex-control-paging li a:hover { background: #000; }
 .flex-control-paging li a.flex-active { background: #444; cursor: default; }
-.slider-caption{position: absolute;width: 100%;padding: 15px 0;background: #000;right: 0;bottom: 13px;color:#FFF;opacity:0.8;}
+.slider-caption{position: relative;width: 100%;padding: 15px 0;background: #000;right: 0;bottom: 13px;color:#FFF;opacity:0.8;}
 .slider-caption h2 a, .slider-caption h2, .full-width .content .slider-caption h2 {	color:#FFF; font-size: 35px;font-family: BebasNeueRegular,arial,Georgia, serif;}
 .slider-caption h2, .slider-caption p { padding: 0 15px; }
 

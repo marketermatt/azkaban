@@ -577,7 +577,8 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                         //Must provide key => value pairs for select options
                         'options'   => array(
                             '1'  => 'Flex Slider', 
-                            '2' => 'Layer Slider', 
+                            '2' => 'Layer Slider',
+							'3' => 'Revolution Slider', 
                         ),
                         'default'   => '1'
                     ),
@@ -694,6 +695,15 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                         'subtitle'  => false,
                         'desc'      => __('Enter the Layer Slider ID you want to enable.', 'azkaban_options'),
                         'validate'  => 'numeric',
+                        'default'   => '',
+                    ),
+					array(
+                        'id'        => 'revolutionslider_id',
+                        'type'      => 'text',
+                        'required'  => array('slider_type', '=', '3'),
+                        'title'     => __('Revolution alias name', 'azkaban_options'),
+                        'subtitle'  => false,
+                        'desc'      => __('Enter the Revolution alias name you want to enable.', 'azkaban_options'),
                         'default'   => '',
                     ),
                 ),

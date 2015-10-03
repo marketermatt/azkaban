@@ -184,13 +184,26 @@ if( $azkaban_options['show_slider'] && is_front_page() ) {
     echo '<div id="az-sliderwrap">';
     echo '<div class="grid-container">';
     echo '<div class="grid-100 grid-parent" id="az-slider">';
-    if( $azkaban_options['slider_type'] == '1' ) {
+	switch ($azkaban_options['slider_type']) {
+		case "1":
+			get_template_part('templates/slider');
+			break;
+		case "2":
+			layerslider($azkaban_options['layerslider_id']);
+			break;
+		case "3":
+			revslider($azkaban_options['revolutionslider_id']);
+			break;
+		default:
+			get_template_part('templates/slider');
+	}
+   /*  if( $azkaban_options['slider_type'] == '1' ) {
         get_template_part('templates/slider');
     }
     else {
         // Show Layer Slider
         layerslider($azkaban_options['layerslider_id']);
-    }
+    } */
     echo '</div>';
     echo '</div>';
     echo '</div>';
