@@ -65,9 +65,11 @@
 <div id="az-navigationwrap">
 <div class="az-navigationbefore"></div>
 <div class="grid-container">
+<?php if( $azkaban_options['show_main_menu'] ) { ?>
 <div class="grid-100 grid-parent" id="az-navigation">
     <?php wp_nav_menu( array( 'theme_location' => 'site-nav', 'depth' => 3, 'container_class' => 'az-sitenav', 'fallback_cb' => 'ax_nav_fallback' ) ); ?>
 </div> <!-- End of az-navigation -->
+<?php } ?>
 </div> <!-- End of grid-container -->
 <div class="az-navigationafter"></div>
 </div> <!-- End of az-navigationwrap -->

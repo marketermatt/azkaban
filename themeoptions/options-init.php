@@ -480,6 +480,15 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                         'validate'  => 'numeric',
                         'default'   => '0',
                     ),
+					array(
+						'id'        => 'show_main_menu',
+						'type'      => 'switch',
+						'title'     => __('Show/Hide main navigation', 'azkaban_options'),
+						'desc'  => __('Show or Hide Main Navigation', 'azkaban_options'),
+						'default'   => 'on',
+						'on'        => 'Enabled',
+						'off'       => 'Disabled',
+					),
                 ),
             );
 
