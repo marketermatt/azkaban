@@ -65,7 +65,7 @@ global $azkaban_options;
     <div class="grid-70 tablet-grid-100 mobile-grid-100 grid-parent" id="az-footerCopyright">
 	<p>
 	<?php if( $azkaban_options['footer_text'] == "" ) { ?>
-		Copyright &copy; 2014 <a href="<?php home_url(); ?>"><?php bloginfo('name'); ?></a> - All Rights Reserved
+		Copyright &copy; 2015-2016 <a href="<?php home_url(); ?>"><?php bloginfo('name'); ?></a> - All Rights Reserved
 	<?php } else { ?>
 		<?php echo $azkaban_options['footer_text']; ?>
 	<?php }

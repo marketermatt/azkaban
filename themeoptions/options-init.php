@@ -920,7 +920,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                         'title'     => __('Footer Text', 'azkaban_options'),
                         'subtitle'  => __('Enter text to be shown on footer', 'azkaban_options'),
                         'validate'  => 'html',
-                        'default'   => 'Copyright 2014 <a href="http://PixelThemeStudio.ca/">PixelThemeStudio.ca</a> - All rights reserved'
+                        'default'   => 'Copyright 2015-2016 <a href="http://PixelThemeStudio.ca/">PixelThemeStudio.ca</a> - All rights reserved'
                     ),
                     array(
                         'id'        => 'show_wp_link_in_footer',
