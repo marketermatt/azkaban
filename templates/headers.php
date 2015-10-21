@@ -5,25 +5,43 @@
 <div class="grid-container">
 <div class="grid-100" id="az-header">
     
-    <?php if($azkaban_options['header_layout'] == 1 ) { ?>
+    <?php 
+		
+		$custom_logo_type = $azkaban_options['custom_logo_type'];
+		if($custom_logo_type=='logo_text')
+		{
+			$custom_logo_text = $azkaban_options['custom_logo_text'];
+		}
+		else
+		{
+			$custom_logo_text = '';
+		}
+		
+		if($azkaban_options['header_layout'] == 1 ) {
+		$custom_logo_type = $azkaban_options['custom_logo_type'];
+	
+	?>
 	    <div class="grid-40 tablet-grid-100 mobile-grid-100" id="az-logo">
-            <h1><a title="<?php bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+            <h1><a title="<?php echo $custom_logo_text; ?>" href="<?php echo home_url(); ?>"><?php echo $custom_logo_text; ?></a></h1>
 		</div> <!-- End of az-logo -->
         <span class="hide-on-tablet"><span class="hide-on-mobile">
         <div class="grid-60 grid-parent" id="az-navigationright">
             <?php wp_nav_menu( array( 'theme_location' => 'site-nav' , 'container_class' => 'az-sitenavr', 'fallback_cb' => 'ax_nav_fallbackr' ) ); ?>
         </div> <!-- End of az-navigation -->
         </span></span>
-    <?php } elseif($azkaban_options['header_layout'] == 2 ) { ?>
+    <?php 
+	} elseif($azkaban_options['header_layout'] == 2 ) {		
+
+	?>
 	    <div class="grid-40 tablet-grid-100 mobile-grid-100" id="az-logo">
-            <h1><a title="<?php bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+            <h1><a title="<?php echo $custom_logo_text; ?>" href="<?php echo home_url(); ?>"><?php echo $custom_logo_text; ?></a></h1>
 		</div> <!-- End of az-logo -->
 	    <div class="grid-60 tablet-grid-100 mobile-grid-100" id="az-headertagline">
             <?php echo $azkaban_options['header_tagline']; ?>
 		</div> <!-- End of az-logo -->
     <?php } elseif($azkaban_options['header_layout'] == 3 ) { ?>
 	    <div class="grid-40 tablet-grid-100 mobile-grid-100" id="az-logo">
-            <h1><a title="<?php bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+            <h1><a title="<?php echo $custom_logo_text; ?>" href="<?php echo home_url(); ?>"><?php echo $custom_logo_text; ?></a></h1>
 		</div> <!-- End of az-logo -->
 		<span class="hide-on-tablet"><span class="hide-on-mobile">
 	    <div class="grid-60" id="az-headerads">
@@ -34,7 +52,7 @@
 		</span></span>
     <?php } elseif($azkaban_options['header_layout'] == 4 ) { ?>
 	    <div class="grid-100" id="az-fulllogo">
-            <h1><a title="<?php bloginfo('name'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+            <h1><a title="<?php echo $custom_logo_text; ?>" href="<?php echo home_url(); ?>"><?php echo $custom_logo_text; ?></a></h1>
 		</div> <!-- End of az-logo -->
     <?php } ?>    
 

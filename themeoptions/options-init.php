@@ -410,6 +410,25 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                         'default'   => array('url' => get_stylesheet_directory_uri() .'/images/logo.png'),
                     ),
 					array(
+                        'id'        => 'custom_logo_text',
+                        'type'      => 'text',
+                        'required'  => array('header_layout', '=', '2'),
+                        'title'     => __('Add Logo Text', 'azkaban_options'),
+                        'desc'      => __('Enter the text for Logo.', 'azkaban_options'),
+                        'validate'  => 'no_html',
+                        'default'   => 'Insert Logo text here',
+                    ),
+					array(
+                        'id'        => 'custom_logo_type',
+                        'type'      => 'radio',
+                        'title'     => __('Select Logo type', 'azkaban_options'),
+                       'options'   => array(
+                            'logo_img'  => 'Logo type Image', 
+                            'logo_text' => 'Logo type Text'
+                        ),
+                        'default'   => 'logo_img'
+                    ),
+					array(
                         'id'        => 'custom_favicon_img',
                         'type'      => 'media',
                         'url'       => true,

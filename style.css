@@ -294,9 +294,10 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 #az-logo h1 a, #az-fulllogo h1 a {
     display: block;
-    text-indent: -5000px;
+    text-indent: 5px;
 	height: 100px;
     overflow: hidden;
+	padding-top: 30px;
     outline: 0;
 }
 

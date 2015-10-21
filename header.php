@@ -81,8 +81,14 @@ else {
     $customHeaderPadding = $azkaban_options['header_padding_top'] + $azkaban_options['header_padding_bottom'];
 ?>
 <style type="text/css">
+	<?php
+		$custom_logo_type = $azkaban_options['custom_logo_type'];
+		if($custom_logo_type=='logo_img')
+		{
+	?>
     #az-logo h1 a { background:transparent url( <?php echo esc_url($logo_img_url); ?> ) no-repeat left center; }
     #az-fulllogo h1 a { background:transparent url( <?php echo esc_url($logo_img_url); ?> ) no-repeat center center; }
+	<?php } ?>
     #az-logo {
         padding-top: <?php echo $azkaban_options['header_padding_bottom']; ?>px;
         padding-bottom: <?php echo $azkaban_options['header_padding_bottom']; ?>px;
