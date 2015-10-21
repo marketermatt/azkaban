@@ -1673,7 +1673,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
                 'customizer' => '1',
                 'default_show' => '1',
                 'default_mark' => '*',
-                'footer_text' => '<p><center><a href="http://www.tkqlhce.com/g9117biroiq5DB6968A576A6EAF8" target="_blank" onmouseover="window.status=\'http://www.hostgator.com\';return true;" onmouseout="window.status=\' \';return true;"><img src="http://www.lduhtrp.net/1i103c37w1-LTRMPMOQLNMQMUQVO" alt="" border="0"/></a></center></p>',
+                'footer_text' => '',
                 'google_api_key' => 'sdfadfasdfasdfasdfasdf',
                 'hint-icon' => 'el-icon-question-sign',
                 'icon_position' => 'right',
