@@ -6,7 +6,7 @@
 <div class="grid-100" id="az-header">
     
     <?php 
-		
+		//echo $azkaban_options['header_layout'];
 		$custom_logo_type = $azkaban_options['custom_logo_type'];
 		if($custom_logo_type=='logo_text')
 		{
@@ -19,15 +19,18 @@
 		
 		if($azkaban_options['header_layout'] == 1 ) {
 		$custom_logo_type = $azkaban_options['custom_logo_type'];
+		
 	
 	?>
 	    <div class="grid-40 tablet-grid-100 mobile-grid-100" id="az-logo">
             <h1><a title="<?php echo $custom_logo_text; ?>" href="<?php echo home_url(); ?>"><?php echo $custom_logo_text; ?></a></h1>
-		</div> <!-- End of az-logo -->
+		</div> <!-- End of az-logo --> 
         <span class="hide-on-tablet"><span class="hide-on-mobile">
+		<?php if( $azkaban_options['show_main_menu'] ) { ?>
         <div class="grid-60 grid-parent" id="az-navigationright">
             <?php wp_nav_menu( array( 'theme_location' => 'site-nav' , 'container_class' => 'az-sitenavr', 'fallback_cb' => 'ax_nav_fallbackr' ) ); ?>
         </div> <!-- End of az-navigation -->
+		<?php } ?>
         </span></span>
     <?php 
 	} elseif($azkaban_options['header_layout'] == 2 ) {		
