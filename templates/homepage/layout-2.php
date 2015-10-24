@@ -23,7 +23,7 @@ while ($r->have_posts()) : $r->the_post();
 <?php cb_get_thumb('small-thumbnail', 'az-SmallThumbnail'); ?>
 </a>
 <h3><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
-<p><?php nk_excerpt('nk_archivelong', 'nk_excerptmore'); ?></p>
+<p><?php //nk_excerpt('nk_archivelong', 'nk_excerptmore'); ?></p>
 </div>
 <?php
 endwhile;
@@ -50,7 +50,7 @@ while ($r->have_posts()) : $r->the_post();
 <?php cb_get_thumb('small-thumbnail', 'az-SmallThumbnail'); ?>
 </a>
 <h3><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
-<p><?php nk_excerpt('nk_archivelong', 'nk_excerptmore'); ?></p>
+<p><?php //nk_excerpt('nk_archivelong', 'nk_excerptmore'); ?></p>
 </div>
 <?php
 endwhile;

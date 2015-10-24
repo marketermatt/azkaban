@@ -172,6 +172,31 @@ else {
             line-height: <?php echo ($customHeaderPadding+40); ?>px;
         }
     }
+	
+	<?php if( $azkaban_options['box_width']) { ?>
+	#az-headerwrap {
+		background-color: <?php echo $azkaban_options['header_box_background'];?>;
+		border-bottom: 1px solid #e1e1e1;
+		float: left;
+		width: 100%;
+	}
+	
+	#az-headerwrap .grid-container
+	{
+		background-color: #fff;
+	}
+	
+	#az-containerwrap {
+		background-color: <?php echo $azkaban_options['body_box_background'];?>;
+		float: left;
+		width: 100%; 
+	}
+	
+	#az-containerwrap .grid-container
+	{
+		background-color: #fff;
+	}
+	<?php } ?>
     <?php if( $azkaban_options['custom_css_embed'] != '' ) echo $azkaban_options['custom_css_embed']; ?>
 </style>
 </head>
@@ -180,7 +205,6 @@ else {
 <?php
 //var_dump($azkaban_options);
 ?>
-
 <?php get_template_part('templates/topbar'); ?>
 
 <?php get_template_part('templates/headers'); ?>
