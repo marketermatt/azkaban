@@ -173,10 +173,13 @@ else {
         }
     }
 	
-	<?php if( $azkaban_options['box_width']) { ?>
+	<?php 
+	// if box width option is on
+	if( $azkaban_options['box_width']) {
+	?>
 	#az-headerwrap {
 		background-color: <?php echo $azkaban_options['header_box_background'];?>;
-		border-bottom: 1px solid #e1e1e1;
+		border-bottom: none;
 		float: left;
 		width: 100%;
 	}
@@ -196,6 +199,53 @@ else {
 	{
 		background-color: #fff;
 	}
+	
+	#az-navigationwrap
+	{
+		float: none;
+		margin-left: 74.5px;
+		width: 89%;
+		background-color: <?php echo $azkaban_options['header_box_background'];?>;
+	}	
+	
+	#az-navigationwrap .grid-container
+	{
+		background-color: #fff;
+	}	
+	
+	@media only screen and (max-width: 1338px) {
+        #az-navigationwrap
+		{
+			float: none;
+			margin-left: 0;
+			width: 100%;
+		}
+		
+		#az-navigationwrap
+		{
+			border-bottom:none;
+			float: left;
+			width: 100%;
+		}
+    }
+	
+	@media only screen and (max-width: 1300px) {
+        #az-navigationwrap
+		{
+			border-bottom:none;
+			float: left;
+			width: 100%;
+		}
+    }
+	
+	body
+	{
+		background: <?php echo $azkaban_options['header_box_background'];?> none repeat scroll 0 0;
+		font-family: "Open Sans",sans-serif;
+		font-size: 13px;
+		line-height: 20px;
+	}
+	
 	<?php } ?>
     <?php if( $azkaban_options['custom_css_embed'] != '' ) echo $azkaban_options['custom_css_embed']; ?>
 </style>
