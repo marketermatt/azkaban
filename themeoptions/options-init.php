@@ -412,7 +412,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
 					array(
                         'id'        => 'custom_logo_text',
                         'type'      => 'text',
-                        'required'  => array('header_layout', '=', '2'),
+                        'required'  => array('custom_logo_type', '=', 'logo_text'),
                         'title'     => __('Add Logo Text', 'azkaban_options'),
                         'desc'      => __('Enter the text for Logo.', 'azkaban_options'),
                         'validate'  => 'no_html',
