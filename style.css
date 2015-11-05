@@ -298,6 +298,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 	height: 100px;
     overflow: hidden;
 	padding-top: 30px;
+	font-size:30px;
     outline: 0;
 }
 

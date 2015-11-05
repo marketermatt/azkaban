@@ -83,6 +83,7 @@ else {
 <style type="text/css">
 	<?php
 		$custom_logo_type = $azkaban_options['custom_logo_type'];
+		 
 		if($custom_logo_type=='logo_img')
 		{
 	?>
@@ -148,6 +149,10 @@ else {
 		padding-bottom: <?php echo get_post_meta($c_pageID, 'nand_main_bottom_padding', true); ?>;
     }
 	<?php endif; ?>
+	
+	<?php if($custom_logo_type=='logo_img')
+		{
+	?>
     @media screen and (max-width: 801px) {  
 	   #az-logo h1 a { background:transparent url( <?php echo esc_url($logo_img_url); ?> ) no-repeat center center; background-size: 240px 60px; }
         #az-headertagline {
@@ -172,7 +177,7 @@ else {
             line-height: <?php echo ($customHeaderPadding+40); ?>px;
         }
     }
-	
+	<?php } // if closed ?>
 	<?php 
 	// if box width option is on
 	if( $azkaban_options['box_width']) {
