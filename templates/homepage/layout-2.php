@@ -38,7 +38,7 @@ wp_reset_query();
 <?php
 $r = new WP_Query( array(   'showposts' => 5,
                             'nopaging' => 0,
-                            'cat' => $azkaban_options['layout2-categoriesleft'],
+                            'cat' => $azkaban_options['layout2-categoriesright'],
                             'post_status' => 'publish',
                             'ignore_sticky_posts' => 1
                     ));
