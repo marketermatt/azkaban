@@ -54,7 +54,7 @@ if (!class_exists('azkaban_options_redux_framework_config')) {
             add_filter('redux/options/'.$this->args['opt_name'].'/compiler', array( $this, 'compiler_action' ), 10, 3);
             
             // Change the arguments after they've been declared, but before the panel is created
-            //add_filter('redux/options/'.$this->args['opt_name'].'/args', array( $this, 'change_arguments' ) );
+            
             
             // Change the default value of a field after it's been set, but before it's been useds
             //add_filter('redux/options/'.$this->args['opt_name'].'/defaults', array( $this,'change_defaults' ) );
