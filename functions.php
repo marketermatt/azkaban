@@ -94,8 +94,13 @@ add_filter( 'delete_attachment', 'delete_retina_support_images' );
  */
 function delete_retina_support_images( $attachment_id ) {
     $meta = wp_get_attachment_metadata( $attachment_id );
+    if(isset($meta))
+    {
     $upload_dir = wp_upload_dir();
+    if(isset($meta['file']) && $meta['file']!='')
+    {   
     $path = pathinfo( $meta['file'] );
+    
     foreach ( $meta as $key => $value ) {
         if ( 'sizes' === $key ) {
             foreach ( $value as $sizes => $size ) {
@@ -106,6 +111,9 @@ function delete_retina_support_images( $attachment_id ) {
             }
         }
     }
+   }
+
+   }
 }
 
 
