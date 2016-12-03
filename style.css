@@ -1244,6 +1244,7 @@ img.size-large,
 img.wp-post-image {
 	height: auto;
 	max-width: 100%;
+	min-height: 260px !important;
 }
 
 #az-backtotop { 
@@ -1624,3 +1625,7 @@ img.wp-post-image {
 .related h2{
   margin-left: 10px !important;
 }
+
+
+.az-ProductDetails{min-height: 150px;}
+.az-ProductTitle {min-height: 100px;}
